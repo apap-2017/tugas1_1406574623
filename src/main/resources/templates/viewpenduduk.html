@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Daftar Keluarga</title>
+</head>
+<body>
+	<div th:replace="fragments/header"></div>
+	<div class="container">
+	<br/><br/>
+	<h2 th:text="'Lihat Data Penduduk - ' + ${penduduk.nik}">Lihat Data Penduduk</h2>
+	<br/>
+	<p th:text="'NIK : '   +${penduduk.nik}">nik</p>
+	<p th:text="'Nama : '   +${penduduk.nama}">nama</p>
+	<p th:text="'Tempat/Tanggal Lahir : '   +${penduduk.tempat_lahir} + ',' + ${penduduk.tanggal_lahir} ">ttl</p>
+	<p th:text="'Alamat : '   +${penduduk.keluarga.alamat}">alamat</p>
+	<p th:text="'RT/RW : '   +${penduduk.keluarga.RT} + '/' + ${penduduk.keluarga.RW}">rtrw</p>
+	<p th:text="'Kelurahan/Desa : '   +${penduduk.keluarga.kelurahan.nama_kelurahan}">nama</p>
+	<p th:text="'Kecamatan : '   +${penduduk.keluarga.kelurahan.kecamatan.nama_kecamatan}">nama</p>
+	<p th:text="'Kota : '   +${penduduk.keluarga.kelurahan.kecamatan.kota.nama_kota}">nama</p>
+	<p th:text="'Golongan Darah : '   +${penduduk.golongan_darah}">nik</p>
+	<p th:text="'Agama : '   +${penduduk.agama}">nik</p>
+	<p th:text="'Status Perkawinan : '   +${penduduk.status_perkawinan}">nik</p>
+	<p th:text="'Pekerjaan : '   +${penduduk.pekerjaan}">nik</p>
+	<p th:text="'Kewarganegaraan : '   + ((${penduduk.is_wni} ==1)?'WNI' : 'WNA')">nik</p>
+
+	<p th:text="'Status Kematian : '   +((${penduduk.is_wafat} ==1)?'Wafat' : 'Hidup')">nik</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Tambah Pendudk</title>
+</head>
+<body>
+	<div th:replace="fragments/header"></div>
+	<div class="container">
+	<br/><br/>
+	<h3>Tambah Keluarga</h3>
+	<form th:action="@{'/penduduk/tambah'}" method="post" id="contact_form">
+	    <br/><span><b>Alamat</b></span>
+	    <input type="text" class="form-control" id="alamat" name="alamat"
+	     placeholder=""/><br/>
+	    
+	    <span><b>RT</b></span>
+	    <input type="text" class="form-control" id="RT" name="RT"
+	     placeholder=""/><br/>
+	    
+	    <span><b>RW</b></span>
+	    <input type="text" class="form-control" id="RW" name="RW"
+	     placeholder=""/><br/> 
+	    
+	    <span><b>Kelurahan/Desa</b></span>
+	    <input type="text" class="form-control" id="kelurahan" name="kelurahan"
+	     placeholder=""/><br/>
+	     
+	    <span><b>Kecamatan</b></span>
+	    <input type="text" class="form-control" id="kecamatan" name="kecamatan"
+	     placeholder=""/><br/>
+	     
+	    <span><b>Kota</b></span>
+	    <input type="text" class="form-control" id="kota" name="kota"
+	     placeholder=""/><br/>
+	     
+	   
+	     
+	    <button type="submit" value="submit" id="submitkeluarga" name="submitkeluarga"
+	     class="btn btn-md">Submit</button>
+   </form>
+	
+	
+	
+	
+	</div>
+</body>
+</html>
