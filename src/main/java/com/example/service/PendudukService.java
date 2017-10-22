@@ -8,6 +8,8 @@ public interface PendudukService {
 	PendudukModel selectPenduduk (String nik);
 	
 	void addPenduduk(PendudukModel penduduk);
+	
+	void updatePendudukWafat(String nik);
 
 
 //    List<PendudukModel> selectAllPenduduk ();

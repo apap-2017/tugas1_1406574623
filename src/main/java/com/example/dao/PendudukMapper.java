@@ -74,4 +74,8 @@ public interface PendudukMapper {
 		@Insert("insert into penduduk(nik, nama, tempat_lahir, tanggal_lahir, jenis_kelamin, is_wni, id_keluarga, agama, pekerjaan, status_perkawinan, status_dalam_keluarga, golongan_darah, is_wafat)"
 				+ "values(#{nik}, #{nama}, #{tempat_lahir}, #{tanggal_lahir}, #{jenis_kelamin}, #{is_wni}, #{id_keluarga}, #{agama}, #{pekerjaan}, #{status_perkawinan}, #{status_dalam_keluarga}, #{golongan_darah}. #{is_wafat}")
 		void addPenduduk(@Param("penduduk") PendudukModel penduduk);
+	
+		//nonaktifkan
+		@Update("UPDATE PENDUDUK SET is_wafat = 1 WHERE nik = #{nik}")
+		 void updatePendudukWafat(String nik);
 }

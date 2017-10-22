@@ -34,6 +34,12 @@ public class PendudukServiceDatabase implements PendudukService {
 	        //log.info ("select penduduk with nik {}", nik);
 	        pendudukMapper.addPenduduk (penduduk);
 	    }
+	    
+	    public void updatePendudukWafat (String nik)
+	    {
+	        //log.info ("select penduduk with nik {}", nik);
+	        pendudukMapper.updatePendudukWafat (nik);
+	    }
 
 
 //	    @Override

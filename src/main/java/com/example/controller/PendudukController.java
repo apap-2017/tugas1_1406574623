@@ -5,6 +5,7 @@ import java.sql.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -69,6 +70,17 @@ public class PendudukController {
 		
 		return "tambahpenduduk-sukses";
 	}
+	
+	@RequestMapping(value = "/penduduk/mati/{nik}")
+	 public String updateKematian(Model model, @PathVariable(value = "nik", required = false) String nik) {
+	  PendudukModel penduduk = pendudukDAO.selectPenduduk(nik);
+	  penduduk.setIs_wafat(1);
+	  pendudukDAO.updatePendudukWafat(nik);
+	  
+	  model.addAttribute("penduduk",penduduk);
+	  return "sukses-updatewafat";
+	 }
+	
 	
 	
 }

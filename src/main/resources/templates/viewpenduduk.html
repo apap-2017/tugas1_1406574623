@@ -24,6 +24,9 @@
 	<p th:text="'Kewarganegaraan : '   + ((${penduduk.is_wni} ==1)?'WNI' : 'WNA')">nik</p>
 
 	<p th:text="'Status Kematian : '   +((${penduduk.is_wafat} ==1)?'Wafat' : 'Hidup')">nik</p>
+	
+	<a th:href="@{/penduduk/mati/} + ${penduduk.nik}"><button style="width: 30%; margin-left: 10px; margin-top: 1px"
+       value="submit" name="action">Nonaktifkan</button></a>
 	</div>
 </body>
 </html>
